@@ -1,3 +1,5 @@
+require 'pry'
+
 class Anagram
   attr_accessor :word
 
@@ -8,6 +10,7 @@ class Anagram
   def match(array_of_possible_anagrams)
     return_value = nil
     array_of_possible_anagrams.each do |word_to_test|
+      binding.pry
       if word_to_test.chars.sort == word.chars.sort
         return_value = word_to_test
       end
